@@ -3,7 +3,7 @@ package ru.netology.JavaDZ13.AviaSouls;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class AviaSouls implements Comparator {
+public class AviaSouls {
     private Ticket[] tickets = new Ticket[0];
 
     /**
@@ -52,8 +52,8 @@ public class AviaSouls implements Comparator {
 
                 }
             }
-            Arrays.sort(result);
         }
+        Arrays.sort(result);
         return result;
 
     }
@@ -66,14 +66,9 @@ public class AviaSouls implements Comparator {
                     result = addToArray(result, ticket); // добавляем его в массив ответа
                 }
             }
-            Arrays.sort(result, comparator);
         }
+        Arrays.sort(result, comparator);
         return result;
-    }
-
-    @Override
-    public int compare(Object o1, Object o2) {
-        return 0;
     }
 }
 
